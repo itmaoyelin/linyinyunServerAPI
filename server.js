@@ -234,7 +234,9 @@ async function consturctServer(moduleDefs) {
           }
           return request(...obj)
         })
-        console.log('[OK]', decode(req.originalUrl))
+        
+        //控制台打印请求地址
+        // console.log('[OK]', decode(req.originalUrl))
 
         const cookies = moduleResponse.cookie
         if (Array.isArray(cookies) && cookies.length > 0) {

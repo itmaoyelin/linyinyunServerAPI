@@ -1,5 +1,4 @@
 // 排行榜
-
 const topList = {
   0: '3779629', //云音乐新歌榜
   1: '3778678', //云音乐热歌榜
@@ -38,16 +37,17 @@ const topList = {
   34: '3001835560', //云音乐ACG动画榜
   35: '3001795926', //云音乐ACG游戏榜
   36: '3001890046', //云音乐ACG VOCALOID榜
-
 }
 
 module.exports = (query, request) => {
   const data = {
     id: topList[query.idx],
-    n: 10000
+    n: 10000,
   }
   return request(
-    'POST', `https://music.163.com/weapi/v3/playlist/detail`, data,
-    {crypto: 'linuxapi', cookie: query.cookie, proxy: query.proxy}
+    'POST',
+    `https://music.163.com/weapi/v3/playlist/detail`,
+    data,
+    { crypto: 'linuxapi', cookie: query.cookie, proxy: query.proxy },
   )
 }

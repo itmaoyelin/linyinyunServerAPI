@@ -1,5 +1,5 @@
 {
-  "name": "linyinyun_serverAPI",
+  "name": "linyinyun",
   "version": "4.8.2",
   "description": "网易云音乐 NodeJS 版 API",
   "scripts": {
